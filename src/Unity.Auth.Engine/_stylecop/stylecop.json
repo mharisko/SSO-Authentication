@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Unity Auth Server",
+      "copyrightText": "Copyright (c) Muhammed Haris K. All rights reserved.\nLicensed under the Trial License, Version 1.0-alpha. See LICENSE in the project root for license information."
+    }
+  }
+}

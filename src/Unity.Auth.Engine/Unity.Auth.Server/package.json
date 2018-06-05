@@ -1,0 +1,53 @@
+{
+  "title": "Authentication Server",
+  "name": "unity.auth.server",
+  "version": "1.0.0-beta.1",
+  "description": "A one page app to authenticate and authorize users against an application",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template",
+    "admin",
+    "app"
+  ],
+  "homepage": "https://meharis.visualstudio.com/Authentication%20Apps/_wiki?pagePath=%2FUnified-Authentication",
+  "bugs": {
+    "url": "https://meharis.visualstudio.com/Authentication%20Apps/_wiki?pagePath=%2FBugs",
+    "email": "feedback@unityauthserver.com"
+  },
+  "license": "MIT",
+  "author": "Unity Auth Server",
+  "contributors": [
+    "Muhammed Haris"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://meharis.visualstudio.com/_git/Authentication%20Apps"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "chart.js": "2.7.0",
+    "datatables.net-bs4": "1.10.16",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1",
+    "jquery.easing": "^1.4.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-cached": "1.1.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-header": "1.8.9",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "gulp-concat": "2.6.1",
+    "gulp-cssmin": "0.2.0",
+    "merge-stream": "^1.0.1",
+    "del": "3.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Unity.Auth.Engine/.vs/
+/Unity.Auth.Engine/Unity.Auth.Server/.vs
+/Unity.Auth.Engine/Unity.Auth.Server/bin
+/Unity.Auth.Engine/Unity.Auth.Server/bower_components
+/Unity.Auth.Engine/Unity.Auth.Server/obj
+/Unity.Auth.Engine/Unity.Auth.Services/bin
+/Unity.Auth.Engine/Unity.Auth.Services/obj
+/Unity.Auth.Engine/Unity.Auth.Server/node_modules
+/Unity.Auth.Engine/Unity.Auth.Server/wwwroot/lib
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/Unity.Auth.Engine/Unity.Auth.Data/obj

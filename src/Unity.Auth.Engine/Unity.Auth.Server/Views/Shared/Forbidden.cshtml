@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Forbidden";
+}
+
+<html>
+<head>
+    <link href="~/css/NotFound.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+    <!--start-wrap--->
+    <div class="wrap">
+        <!--start-content------>
+        <div class="content">
+            <img src="~/images/403error-img.png" title="error" />
+            <!---728x90--->
+            <p><span>@ViewBag.RequestedUrl</span>You don't have permission to access the program or page that you requested.</p>
+
+            <a asp-action="Index" asp-controller="Home">Back To Home</a>
+            <!---728x90--->
+            <div class="copy-right">
+                <p>&copy; 2018 Unity Engine. All Rights Reserved</p>
+            </div>
+        </div>
+        <!--End-Cotent------>
+    </div>
+    <!--End-wrap--->
+</body>
+</html>
+

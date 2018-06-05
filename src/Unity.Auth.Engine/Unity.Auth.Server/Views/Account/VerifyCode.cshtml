@@ -1,0 +1,48 @@
+﻿@model Unity.Auth.Server.Models.VerifyCodeViewModel
+
+@{
+    ViewData["Title"] = "VerifyCode";
+}
+
+<h2>VerifyCode</h2>
+
+<div>
+    <h4>VerifyCodeViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Provider)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Provider)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReturnUrl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RememberMe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RememberMe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RememberBrowser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RememberBrowser)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

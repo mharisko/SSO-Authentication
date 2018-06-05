@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>    
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RuntimeIdentifiers>win7-x64;osx.10.11-x64</RuntimeIdentifiers>
+    <UserSecretsId>b1397729-f68e-4871-a2c6-cc99f2e77047</UserSecretsId>
+    <Authors>Muhammed Haris K</Authors>
+    <Company>Unity Authentication Dashboard Service</Company>
+    <Description></Description>
+    <Copyright>Muhammed Haris. All rights reserved.</Copyright>
+    <RepositoryUrl>https://meharis.visualstudio.com/_git/Authentication%20Apps</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Identity Server4, OpenId Authentication, SingleSignOn</PackageTags>
+    <PackageIconUrl>~/images/UnityServer.ico</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="AppStartup\Startup.Auth.cs" />
+    <Content Include="AppStartup\Route.Config.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Security\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Identity\Factories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.6.362" />
+    <PackageReference Include="IdentityServer4" Version="2.0.3" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.1.0" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.0.0" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.4.1" />
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unity.Auth.Services\Unity.Auth.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\**\*;Views;appsettings.json;nlog.config;web.config">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>$(SolutionDir)\_stylecop\StyleCopeRules.ruleset</CodeAnalysisRuleSet>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\Unity.Auth.Server.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.0\Unity.Auth.Server.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(SolutionDir)\_stylecop\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="unityauthengine.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="MyPreCompileTarget" BeforeTargets="Build">
+    <Exec Command="gulp production" />
+  </Target>
+
+</Project>
