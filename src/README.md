@@ -5,19 +5,15 @@ Unity is a Identity server to manage single sign-on for multiple applications an
 Application will provide SSO with help of Identity Server 4 and Asp.Net Core
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+1.	Visual Studio 2017 with Asp.Ner core 2.0
+2.	Service fabric.
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+You run this IIS, Self conatiner package or in service fabric cluster. 
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+You can contribute to this project to make this better. 
 
 If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
